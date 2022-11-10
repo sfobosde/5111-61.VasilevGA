@@ -5,7 +5,8 @@ import math
 def calс_geometric_mean(arr: np.ndarray):
     mult = 1
     for num in arr:
-        mult *= num
+        if (num > 0):
+            mult *= num
 
     return math.pow(mult, 1/arr.size)
 
@@ -16,7 +17,7 @@ def calc_sum(arr:np.ndarray):
             summa += num
     return summa
 
-n = 3
+n = 10
 
 arr = np.ndarray(n)
 
