@@ -1,13 +1,6 @@
-simple_text = "Составить программу, которая проверяет является ли введенное с клавиатуры слово «палиндромом» (пример, «казак»)."
+import UserController
 
-code_key = "ergfgds"
+user1 = UserController.User_Controller()
+user2 = UserController.User_Controller()
 
-coded_text = ""
-index = 0
-
-for symbol in simple_text:
-    coded_text += chr(ord(code_key[index]) + ord(symbol))
-    print(ord(symbol), end = ' ')
-    index = index + 1 if (len(code_key) < index) else 0
-
-print(coded_text)
+print(user2.encode_text(user1.send_message("My name")))
