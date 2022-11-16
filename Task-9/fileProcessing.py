@@ -1,4 +1,5 @@
 from Task8.Resolve_Task8 import Spellchecking
+import json
 
 def get_file_data(file_directory: str):
     file = open(file_directory, 'r', encoding='utf-8')
@@ -6,4 +7,15 @@ def get_file_data(file_directory: str):
     file.close()
     return file_data
 
-print(Spellchecking.split_text(get_file_data("text.txt")))
+
+words = Spellchecking.split_text(get_file_data("text.txt"))
+
+dict = {}
+
+for word in words:
+    if dict.get(word):
+        dict.update({word : dict.get(word) + 1})
+    else:
+        dict.update({word : 1})
+
+print(dict)

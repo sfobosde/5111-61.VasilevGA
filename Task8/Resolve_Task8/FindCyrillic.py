@@ -3,8 +3,8 @@
 string = input("Введите текст:")
 
 print(string)
-for symbol in string:
-    if (symbol.upper() >= 'А' ) and (symbol.upper() <= 'Я'):
+for symbol in string.upper():
+    if (symbol >= 'А') and (symbol <= 'Я'):
         print('-', end ='')
     else:
         print(' ', end ='')
