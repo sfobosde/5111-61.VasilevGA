@@ -27,7 +27,7 @@ def remove_duplicates(text):
                    flags=re.IGNORECASE)
 
     return text
-
+''''
 text = 'в сравнение сравнение сравнение Сравнение с собаками, кошками Кошки не претерпели серьезных изменений в процессе одомашнивания.'
 print(text)
-print(remove_duplicates(text))
+print(remove_duplicates(text))'''
