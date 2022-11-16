@@ -7,7 +7,7 @@ def split_text(text: str, expression = r'\b(\w+)\b'):
     return words
 
 def get_neighbour_dublicates_count(text:str, word: str):
-    return re.findall(f'{word} {word}', text)
+    return re.findall(f'{word} {word}', text, flags=re.IGNORECASE)
 
 def remove_dublicates(text):
     words = split_text(text)
@@ -16,11 +16,12 @@ def remove_dublicates(text):
         while get_neighbour_dublicates_count(text, word):
             text = re.sub(f'{word} {word}',
                    word,
-                   text)
+                   text,
+                   flags=re.IGNORECASE)
 
     return text
 
-text = 'in comparison comparison, to dogs, cats have have not undergone major changes during the domestication process.'
+text = 'in comparison comparison, to dogs, cats Cats have have not undergone major changes during the domestication process.'
 print(split_text(text))
 
 print(text)
