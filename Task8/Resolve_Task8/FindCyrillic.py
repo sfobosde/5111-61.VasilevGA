@@ -5,6 +5,6 @@ string = input("Введите текст:")
 print(string)
 for symbol in string.upper():
     if (symbol >= 'А') and (symbol <= 'Я'):
-        print('-', end ='')
+        print('-', end='')
     else:
-        print(' ', end ='')
+        print(' ', end='')
