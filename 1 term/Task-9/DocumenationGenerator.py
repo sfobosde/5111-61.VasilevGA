@@ -20,6 +20,6 @@ def read_file_data(file_directory):
 
 try:
     file_data = read_file_data('Spellchecking.py')
-    generate_documentaion_file('Spellchecking.py.txt', file_data)
+    generate_documentation_file('Spellchecking.py.txt', file_data)
 except Exception as e:
     print(str(e))
